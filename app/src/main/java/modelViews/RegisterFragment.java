@@ -26,11 +26,6 @@ import kotlin.jvm.internal.Intrinsics;
 public class RegisterFragment extends Fragment
 {
 
-    private EditText userId;
-    private EditText password;
-    private EditText name;
-    private Button register;
-
     private ActivityFragmentCommunication activityFragmentCommunication;
 
     public RegisterFragment()
@@ -68,50 +63,55 @@ public class RegisterFragment extends Fragment
     {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
-        userId = view.findViewById(R.id.userIdInput);
-        password = view.findViewById(R.id.passwordInput);
-        name = view.findViewById(R.id.nameInput);
-        register = view.findViewById(R.id.registerButton);
+        EditText userId = view.findViewById(R.id.userIdReg);
+        EditText password = view.findViewById(R.id.passwordReg);
+        EditText name = view.findViewById(R.id.nameReg);
+
+        Button register = view.findViewById(R.id.registerButtonReg);
 
         register.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                UserEntity userEntity = new UserEntity();
-                userEntity.setUserId(userId.getText().toString());
-                userEntity.setPassword(password.getText().toString());
-                userEntity.setName(name.getText().toString());
-                if (validateInput(userEntity))
-                {
-                    UserDatabase userDatabase=UserDatabase.getUserDatabase(getActivity().getApplicationContext());
-                    // TO DO:: Sa probez daca merge
-                    UserDao userDao = userDatabase.userDao();
-                    new Thread(new Runnable()
-                    {
-                        @Override
-                        public void run()
-                        {
-                            userDao.registerUser(userEntity);
-                            getActivity().runOnUiThread(new Runnable()
-                            {
-                                @Override
-                                public void run()
-                                {
-                                    Toast.makeText(getActivity().getApplicationContext(),"User Registered!",Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                        }
-                    }).start();
-                } else
-                {
-                    Toast.makeText(getActivity().getApplicationContext(),"Fill all fields",Toast.LENGTH_SHORT).show();
-                    // TO DO:: Sa probez daca merge
-                }
+                insertUserAccount(userId.getText().toString(), password.getText().toString(), name.getText().toString());
             }
         });
 
         return view;
+    }
+
+    private void insertUserAccount(String userId, String password, String name)
+    {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUserId(userId);
+        userEntity.setPassword(password);
+        userEntity.setName(name);
+        if (validateInput(userEntity))
+        {
+            UserDatabase userDatabase = UserDatabase.getUserDatabase(getActivity().getApplicationContext());
+
+            UserDao userDao = userDatabase.userDao();
+            new Thread(new Runnable()
+            {
+                @Override
+                public void run()
+                {
+                    userDao.registerUser(userEntity);
+                    getActivity().runOnUiThread(new Runnable()
+                    {
+                        @Override
+                        public void run()
+                        {
+                            Toast.makeText(getActivity().getApplicationContext(), "User Registered!", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }).start();
+        } else
+        {
+            Toast.makeText(getActivity().getApplicationContext(), "Fill all fields", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private Boolean validateInput(UserEntity userEntity)

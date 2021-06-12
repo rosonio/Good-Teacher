@@ -7,7 +7,7 @@
     tools:context="modelViews.RegisterFragment">
 
     <TextView
-        android:id="@+id/header_title"
+        android:id="@+id/register_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,40 +22,39 @@
         />
 
     <EditText
-        android:id="@+id/userIdInput"
+        android:id="@+id/userIdReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintTop_toBottomOf="@+id/register_header"
         android:layout_margin="@dimen/layoutMargin"
         android:hint="Enter UserId"
         />
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/passwordReg"
         android:inputType="textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/userIdInput"
+        app:layout_constraintTop_toBottomOf="@+id/userIdReg"
         android:layout_margin="@dimen/layoutMargin"
         android:hint="Enter Password"
         />
     <EditText
-        android:id="@+id/nameInput"
+        android:id="@+id/nameReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInput"
+        app:layout_constraintTop_toBottomOf="@+id/passwordReg"
         android:layout_margin="@dimen/layoutMargin"
         android:hint="Enter Name"
         />
 
     <Button
-        android:id="@+id/registerButton"
+        android:id="@+id/registerButtonReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/layoutMargin"
-        app:layout_constraintTop_toBottomOf="@id/nameInput"
+        app:layout_constraintTop_toBottomOf="@id/nameReg"
         android:text="Register"
         android:backgroundTint="@color/black"
-
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
