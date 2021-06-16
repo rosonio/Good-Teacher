@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.example.goodteacher.R;
+import com.example.user.R;
 
 import interfaces.ActivityFragmentCommunication;
 

@@ -1,4 +1,4 @@
-package com.example.goodteacher;
+package com.example.user;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

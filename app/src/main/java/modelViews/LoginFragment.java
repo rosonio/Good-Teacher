@@ -13,15 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.goodteacher.R;
-import com.example.goodteacher.UserDao;
-import com.example.goodteacher.UserDatabase;
-import com.example.goodteacher.UserEntity;
-
-import org.jetbrains.annotations.NotNull;
+import com.example.user.R;
+import com.example.user.UserDao;
+import com.example.user.UserDatabase;
+import com.example.user.UserEntity;
 
 import interfaces.ActivityFragmentCommunication;
-import kotlin.jvm.internal.Intrinsics;
 
 
 public class LoginFragment extends Fragment

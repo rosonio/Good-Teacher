@@ -1,4 +1,4 @@
-package com.example.goodteacher;
+package com.example.user;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

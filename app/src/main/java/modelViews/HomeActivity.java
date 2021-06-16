@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.goodteacher.R;
+import com.example.user.R;
 
 public class HomeActivity extends AppCompatActivity
 {
