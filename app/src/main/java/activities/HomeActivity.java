@@ -1,4 +1,4 @@
-package modelViews;
+package activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,12 @@ import android.view.MenuItem;
 
 import com.example.user.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import home_fragments.AddFragment;
+import home_fragments.HomeFragment;
+import home_fragments.NewsFragment;
+import home_fragments.ProfileFragment;
+import home_fragments.SearchFragment;
 
 public class HomeActivity extends AppCompatActivity
 {

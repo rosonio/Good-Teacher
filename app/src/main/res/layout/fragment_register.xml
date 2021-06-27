@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="modelViews.RegisterFragment">
+    tools:context="login_fragments.RegisterFragment">
 
     <TextView
         android:id="@+id/register_header"
@@ -16,9 +16,9 @@
         android:text="Register User"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="@dimen/HeaderTextSize"
+        android:textSize="@dimen/header_text_size"
         android:textAlignment="center"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         />
 
     <EditText
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/register_header"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         android:hint="Enter UserId"
         />
     <EditText
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/userIdReg"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         android:hint="Enter Password"
         />
     <EditText
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/passwordReg"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         android:hint="Enter Name"
         />
 
@@ -51,7 +51,7 @@
         android:id="@+id/registerButtonReg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         app:layout_constraintTop_toBottomOf="@id/nameReg"
         android:text="Register"
         android:backgroundTint="@color/black"

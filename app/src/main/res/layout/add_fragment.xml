@@ -1,14 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/blue">
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="home_fragments.AddFragment">
 
     <TextView
+        android:id="@+id/post_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SEARCH FRAGMENT"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Make a review"
+        android:textStyle="bold"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="@dimen/header_text_size"
+        android:textAlignment="center"
+        android:layout_margin="@dimen/layout_margin"
         />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/prof_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/post_header"
+        android:layout_margin="@dimen/layout_margin"
+        android:hint="Enter teacher's name"
+        />
+    <EditText
+        android:id="@+id/description_prof_edit"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/description_box_height"
+        app:layout_constraintTop_toBottomOf="@+id/prof_name_edit"
+        android:layout_margin="@dimen/layout_margin"
+        android:gravity="top"
+        android:hint="Enter teacher's description"
+        />
+    <EditText
+        android:id="@+id/grade_prof_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/description_prof_edit"
+        android:layout_margin="@dimen/layout_margin"
+        android:hint="Enter a grade"
+        />
+
+    <Button
+        android:id="@+id/post_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/layout_margin"
+        app:layout_constraintTop_toBottomOf="@id/grade_prof_edit"
+        android:text="Post"
+        android:backgroundTint="@color/black"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

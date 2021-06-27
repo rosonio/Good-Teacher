@@ -1,4 +1,4 @@
-package user;
+package user_data_acces;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

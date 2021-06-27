@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="modelViews.LoginFragment">
+    tools:context="login_fragments.LoginFragment">
 
 
 
@@ -18,9 +18,9 @@
         android:text="Register User"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
-        android:textSize="@dimen/HeaderTextSize"
+        android:textSize="@dimen/header_text_size"
         android:textAlignment="center"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         />
 
     <EditText
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/login_header"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         android:hint="Enter UserId"
         />
     <EditText
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/userIdLog"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         android:hint="Enter Password"
         />
 
@@ -45,7 +45,7 @@
         android:id="@+id/loginButtonLog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         app:layout_constraintTop_toBottomOf="@id/passwordLog"
         android:text="Login"
         android:backgroundTint="@color/black"
@@ -55,7 +55,7 @@
         android:id="@+id/registerButtonLog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/layoutMargin"
+        android:layout_margin="@dimen/layout_margin"
         app:layout_constraintTop_toBottomOf="@id/loginButtonLog"
         android:text="Register"
         android:backgroundTint="@color/black"

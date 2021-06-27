@@ -1,4 +1,4 @@
-package user;
+package user_data_acces;
 
 import android.content.Context;
 
@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase;
 public abstract class UserDatabase extends RoomDatabase
 {
 
-    public static final String dbName = "user";
+    public static final String dbName = "user_data_acces";
     public static UserDatabase userDatabase;
 
     public static synchronized UserDatabase getUserDatabase(Context context)

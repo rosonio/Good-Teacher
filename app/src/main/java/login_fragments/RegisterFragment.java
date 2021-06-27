@@ -1,4 +1,4 @@
-package modelViews;
+package login_fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,9 +13,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.user.R;
-import user.UserDao;
-import user.UserDatabase;
-import user.UserEntity;
+import user_data_acces.UserDao;
+import user_data_acces.UserDatabase;
+import user_data_acces.UserEntity;
 
 import org.jetbrains.annotations.NotNull;
 
