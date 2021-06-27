@@ -16,15 +16,16 @@ import android.widget.Toast;
 import com.example.user.R;
 
 import activities.HomeActivity;
-import user_data_acces.UserDao;
-import user_data_acces.UserDatabase;
-import user_data_acces.UserEntity;
+import user_data_access.UserDao;
+import user_data_access.UserDatabase;
+import user_data_access.UserEntity;
 
 import interfaces.ActivityFragmentCommunication;
 
 
 public class LoginFragment extends Fragment
 {
+    public static UserEntity loggedUser = null;
 
     private ActivityFragmentCommunication activityFragmentCommunication;
 
@@ -117,6 +118,7 @@ public class LoginFragment extends Fragment
                     } else
                     {
                         Intent intent = new Intent(getActivity(), HomeActivity.class);
+                        loggedUser = userEntity;
                         startActivity(intent);
                     }
                 }

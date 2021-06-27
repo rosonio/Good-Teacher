@@ -13,9 +13,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.user.R;
-import user_data_acces.UserDao;
-import user_data_acces.UserDatabase;
-import user_data_acces.UserEntity;
+import user_data_access.UserDao;
+import user_data_access.UserDatabase;
+import user_data_access.UserEntity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -77,7 +77,6 @@ public class RegisterFragment extends Fragment
                 insertUserAccount(userId.getText().toString(), password.getText().toString(), name.getText().toString());
             }
         });
-
         return view;
     }
 
