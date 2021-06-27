@@ -47,6 +47,9 @@ public class HomeActivity extends AppCompatActivity
                         case R.id.nav_profile:
                             selectedFragment = new ProfileFragment();
                             break;
+                        case R.id.nav_add:
+                            selectedFragment = new AddFragment();
+                            break;
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.fl_home_container,selectedFragment).commit();
 

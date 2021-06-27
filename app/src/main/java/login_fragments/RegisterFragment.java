@@ -13,9 +13,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.user.R;
-import com.example.user.UserDao;
-import com.example.user.UserDatabase;
-import com.example.user.UserEntity;
+import user.UserDao;
+import user.UserDatabase;
+import user.UserEntity;
 
 import org.jetbrains.annotations.NotNull;
 
