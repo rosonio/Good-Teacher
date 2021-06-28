@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="Register User"
+        android:text="Login User"
         android:textStyle="bold"
         style="@style/TextAppearance.AppCompat.Headline"
         android:textSize="@dimen/header_text_size"
